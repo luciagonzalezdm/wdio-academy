@@ -46,10 +46,18 @@ class CartPage extends BasePage {
         return $('[class="cheque-indent"]');
     }
 
+  /**
+   * Click on store name and go to home page
+   * 
+   */
     async goToHomePage() {
         await super.clickElement(this.storeLogo);
     }
 
+  /**
+   * Click on produck and add it to cart
+   * 
+   */
     async clickAddToCart() {
         await super.clickElement(this.product);
         await super.clickElement(this.addToCartBtn);
@@ -75,6 +83,10 @@ class CartPage extends BasePage {
         await super.clickElement(this.wirePaymentMethod);
     }
 
+  /**
+   * Completes the steps to make an order and pay with wire transfer
+   * 
+   */
     async makeAnOrderWithWire() {
         await this.clickCheckout1();
         await this.clickCheckout2();

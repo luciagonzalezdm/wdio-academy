@@ -76,7 +76,11 @@ class SignUpPage extends BasePage {
     async clickCreateBtn() {
         await super.clickElement(this.createAccountBtn);
     }
-
+    
+  /**
+   * Complete all the fields of the signup form
+   * @param {Object} account from data file
+   */
     async signUpForm(account) {
         await this.selectGenderBtn(account.gender);
         await this.completeFirstName(account.firstName);
