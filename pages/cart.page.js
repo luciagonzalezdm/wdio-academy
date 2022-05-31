@@ -22,11 +22,11 @@ class CartPage extends BasePage {
         return $('[class="btn btn-default button button-medium"]');
     }        
 
-    get secondCheckoutBtn() {
+    get addressCheckoutBtn() {
         return $('[class="button btn btn-default standard-checkout button-medium"]');
     }
 
-    get thirdCheckoutBtn() {
+    get shippingCheckoutBtn() {
         return $('[class="button btn btn-default button-medium"]');
     }
 
@@ -63,16 +63,16 @@ class CartPage extends BasePage {
         await super.clickElement(this.addToCartBtn);
     }
 
-    async clickCheckout1() {
+    async clickCheckout() {
         await super.clickElement(this.checkoutBtn);
     }
 
-    async clickCheckout2() {
-        await super.clickElement(this.secondCheckoutBtn);
+    async clickAddressCheckout() {
+        await super.clickElement(this.addressCheckoutBtn);
     }
 
-    async clickCheckout3() {
-        await super.clickElement(this.thirdCheckoutBtn);
+    async clickShippingCheckout() {
+        await super.clickElement(this.shippingCheckoutBtn);
     }
 
     async clickAgreeTermsChk() {
@@ -88,13 +88,13 @@ class CartPage extends BasePage {
    * 
    */
     async makeAnOrderWithWire() {
-        await this.clickCheckout1();
-        await this.clickCheckout2();
-        await this.clickCheckout3();
+        await this.clickCheckout();
+        await this.clickAddressCheckout();
+        await this.clickShippingCheckout();
         await this.clickAgreeTermsChk();
-        await this.clickCheckout2();
+        await this.clickAddressCheckout();
         await this.clickWirePayment();
-        await this.clickCheckout3();
+        await this.clickShippingCheckout();
     }
 
 }
