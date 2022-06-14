@@ -12,7 +12,8 @@
         "@wdio/mocha-framework": "^7.19.7",
         "@wdio/spec-reporter": "^7.19.7",
         "chromedriver": "^101.0.0",
-        "wdio-chromedriver-service": "^7.3.2"
+        "wdio-chromedriver-service": "^7.3.2",
+        "wdio-image-comparison-service": "^3.1.1"
     },
     "scripts": {
         "test": "wdio run wdio.conf.js"
