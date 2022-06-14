@@ -64,7 +64,7 @@ export const validAccount = {
       state: "Florida",
       postalCode: "50000",
       mobilePhone: "534566",
-      returnMsg: "There is 1 error"
+      returnMsg: "There are 2 errors"
     }
   ];
  
