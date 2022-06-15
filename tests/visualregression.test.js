@@ -1,4 +1,5 @@
 import LoginPage from "../pages/login.page";
+import { expect } from 'chai';
 
 describe("Visual regression", () => {
     it("should compare successful authentication page with baseline", async () => {
